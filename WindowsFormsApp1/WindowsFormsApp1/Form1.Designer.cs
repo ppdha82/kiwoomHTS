@@ -184,9 +184,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(4, 26);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 12);
+            this.label5.Size = new System.Drawing.Size(53, 12);
             this.label5.TabIndex = 8;
-            this.label5.Text = "label5";
+            this.label5.Text = "비밀번호";
             // 
             // passwordTextBox
             // 
@@ -233,12 +233,16 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(3, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 12);
+            this.label6.Size = new System.Drawing.Size(109, 25);
             this.label6.TabIndex = 0;
-            this.label6.Text = "label6";
+            this.label6.Text = "전체 매입금액";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // totalPurchaseLabel
             // 
@@ -255,12 +259,16 @@
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(3, 25);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 12);
+            this.label8.Size = new System.Drawing.Size(109, 23);
             this.label8.TabIndex = 2;
-            this.label8.Text = "label8";
+            this.label8.Text = "전체 평가금액";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // totalEstimateLabel
             // 
@@ -277,12 +285,16 @@
             // 
             // label10
             // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(3, 48);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(44, 12);
+            this.label10.Size = new System.Drawing.Size(109, 25);
             this.label10.TabIndex = 4;
-            this.label10.Text = "label10";
+            this.label10.Text = "전체 손익금액";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // totalProfitLabel
             // 
@@ -299,12 +311,16 @@
             // 
             // label12
             // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(3, 73);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(44, 12);
+            this.label12.Size = new System.Drawing.Size(109, 27);
             this.label12.TabIndex = 6;
-            this.label12.Text = "label12";
+            this.label12.Text = "전체 수익률";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // totalProfitRateLabel
             // 
