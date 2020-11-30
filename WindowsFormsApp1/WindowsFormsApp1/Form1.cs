@@ -23,8 +23,14 @@ namespace WindowsFormsApp1
             }
         }
 
+        /* chap 4.1 */
         List<stockInfo> stockList;
 
+        /* chap 4.2 */
+        public string currentStockCode = "";
+
+        /* chap 4.1 */
+        /* chap 4.2 */
         public void onEventConnect(object sender, AxKHOpenAPILib._DKHOpenAPIEvents_OnEventConnectEvent e)
         {
             if (e.nErrCode == 0)
@@ -54,6 +60,8 @@ namespace WindowsFormsApp1
                 /* stock code list */
                 stockList = new List<stockInfo>();
 
+                /* chap 4.1 */
+                /* chap 4.2 */
                 AutoCompleteStringCollection stockcollection = new AutoCompleteStringCollection();
                 string stockCode = axKHOpenAPI1.GetCodeListByMarket(null);
                 string[] stockCodeArray = stockCode.Split(';');
@@ -99,6 +107,8 @@ namespace WindowsFormsApp1
             }
         }
 
+        /* chap 4.1 */
+        /* chap 4.2 */
         public void onReceiveTrData(object sender, AxKHOpenAPILib._DKHOpenAPIEvents_OnReceiveTrDataEvent e)
         {
             Console.WriteLine(e.sScrNo);
@@ -123,7 +133,9 @@ namespace WindowsFormsApp1
                 totalProfitRateLabel.Text = String.Format("{0:f2}", totalProfitRate);
 #endif
             }
-            else if(e.sRQName == "종목정보요청")
+            /* chap 4.1 */
+            /* chap 4.2 */
+            else if (e.sRQName == "종목정보요청")
             {
                 long stockPrice = long.Parse(axKHOpenAPI1.GetCommData(e.sTrCode, e.sRQName, 0, "현재가").Trim().Replace("-", ""));
                 string stockName = axKHOpenAPI1.GetCommData(e.sTrCode, e.sRQName, 0, "종목명").Trim();
@@ -147,16 +159,43 @@ namespace WindowsFormsApp1
             }
         }
 
+        /* chap 4.2 */
         public void onReceiveRealData(object sender, AxKHOpenAPILib._DKHOpenAPIEvents_OnReceiveRealDataEvent e)
         {
             Console.WriteLine(e.sRealType);
+            if(e.sRealData == "주식체결")
+            {
+                if(e.sRealKey == currentStockCode)
+                {
+                    long stockPrice = long.Parse(axKHOpenAPI1.GetCommRealData(currentStockCode, 10));
+                    long upDown = long.Parse(axKHOpenAPI1.GetCommRealData(currentStockCode, 11));
+                    string upDownRate = axKHOpenAPI1.GetCommRealData(currentStockCode, 12);
+                    long volume = long.Parse(axKHOpenAPI1.GetCommRealData(currentStockCode, 15));
 
+                    stockPriceLabel.Text = String.Format("{0:#,###}", stockPrice);
+                    stockUpDownLabel.Text = String.Format("{0:#,###}", upDown);
+                    stockVolumeLabel.Text = String.Format("{0:#,###}", volume);
+                    if(upDown == 0)
+                    {
+                        stockUpDownLabel.Text = "0";
+                    }
+
+                    if(volume == 0)
+                    {
+                        stockVolumeLabel.Text = "0";
+                    }
+                    stockUpDownRateLabel.Text = upDownRate + "%";
+                }
+            }
         }
 
+        /* Search Button Click Event */
+        /* chap 4.1 */
+        /* chap 4.2 */
         public void stockSearch(object sender, EventArgs e)
         {
             string stockName = stockTextBox.Text;
-            int index = stockList.FindIndex(o => o.stockName == stockName);
+            int index = stockList.FindIndex(a => a.stockName == stockName);
             string stockCode = stockList[index].stockCode;
             axKHOpenAPI1.SetInputValue("종목코드", stockCode);
             axKHOpenAPI1.CommRqData("종목정보요청", "opt10001", 0, "5000");
@@ -169,6 +208,7 @@ namespace WindowsFormsApp1
             axKHOpenAPI1.OnEventConnect += onEventConnect;
             passwordTextBox.TextChanged += encryptPassword;
             balanceCheckButton.Click += ButtonClicked;
+            axKHOpenAPI1.OnReceiveRealData += onReceiveRealData;
             axKHOpenAPI1.OnReceiveTrData += onReceiveTrData;
             stockSearchButton.Click += stockSearch;
         }
