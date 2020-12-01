@@ -64,10 +64,18 @@
             this.stockUpDownLabel = new System.Windows.Forms.Label();
             this.stockVolumeLabel = new System.Windows.Forms.Label();
             this.stockUpDownRateLabel = new System.Windows.Forms.Label();
+            this.stockTextBox5_1 = new System.Windows.Forms.TextBox();
+            this.stockSearchButton5_1 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.priceLabel = new System.Windows.Forms.Label();
+            this.upDownRateLabel = new System.Windows.Forms.Label();
+            this.priceListBox = new System.Windows.Forms.ListBox();
+            this.volumeListBox = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axKHOpenAPI1)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -353,14 +361,14 @@
             // 
             this.stockTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.stockTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.stockTextBox.Location = new System.Drawing.Point(483, 41);
+            this.stockTextBox.Location = new System.Drawing.Point(30, 352);
             this.stockTextBox.Name = "stockTextBox";
             this.stockTextBox.Size = new System.Drawing.Size(119, 21);
             this.stockTextBox.TabIndex = 4;
             // 
             // stockSearchButton
             // 
-            this.stockSearchButton.Location = new System.Drawing.Point(634, 39);
+            this.stockSearchButton.Location = new System.Drawing.Point(181, 350);
             this.stockSearchButton.Name = "stockSearchButton";
             this.stockSearchButton.Size = new System.Drawing.Size(75, 23);
             this.stockSearchButton.TabIndex = 5;
@@ -385,7 +393,7 @@
             this.tableLayoutPanel3.Controls.Add(this.stockUpDownLabel, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.stockVolumeLabel, 1, 3);
             this.tableLayoutPanel3.Controls.Add(this.stockUpDownRateLabel, 1, 4);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(483, 73);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(30, 384);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 5;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.75F));
@@ -526,12 +534,110 @@
             this.stockUpDownRateLabel.Text = "label19";
             this.stockUpDownRateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // stockTextBox5_1
+            // 
+            this.stockTextBox5_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.stockTextBox5_1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.stockTextBox5_1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.stockTextBox5_1.Location = new System.Drawing.Point(457, 80);
+            this.stockTextBox5_1.Name = "stockTextBox5_1";
+            this.stockTextBox5_1.Size = new System.Drawing.Size(100, 21);
+            this.stockTextBox5_1.TabIndex = 7;
+            // 
+            // stockSearchButton5_1
+            // 
+            this.stockSearchButton5_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.stockSearchButton5_1.Location = new System.Drawing.Point(607, 80);
+            this.stockSearchButton5_1.Name = "stockSearchButton5_1";
+            this.stockSearchButton5_1.Size = new System.Drawing.Size(75, 23);
+            this.stockSearchButton5_1.TabIndex = 8;
+            this.stockSearchButton5_1.Text = "종목검색";
+            this.stockSearchButton5_1.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.priceLabel, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.upDownRateLabel, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.priceListBox, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.volumeListBox, 1, 1);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(457, 112);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.5F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92.5F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(225, 440);
+            this.tableLayoutPanel4.TabIndex = 9;
+            // 
+            // priceLabel
+            // 
+            this.priceLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.priceLabel.AutoSize = true;
+            this.priceLabel.BackColor = System.Drawing.Color.SeaShell;
+            this.priceLabel.Location = new System.Drawing.Point(3, 0);
+            this.priceLabel.Name = "priceLabel";
+            this.priceLabel.Size = new System.Drawing.Size(106, 33);
+            this.priceLabel.TabIndex = 0;
+            this.priceLabel.Text = "0";
+            this.priceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // upDownRateLabel
+            // 
+            this.upDownRateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.upDownRateLabel.AutoSize = true;
+            this.upDownRateLabel.BackColor = System.Drawing.Color.LemonChiffon;
+            this.upDownRateLabel.Location = new System.Drawing.Point(115, 0);
+            this.upDownRateLabel.Name = "upDownRateLabel";
+            this.upDownRateLabel.Size = new System.Drawing.Size(107, 33);
+            this.upDownRateLabel.TabIndex = 1;
+            this.upDownRateLabel.Text = "0";
+            this.upDownRateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // priceListBox
+            // 
+            this.priceListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.priceListBox.FormattingEnabled = true;
+            this.priceListBox.ItemHeight = 12;
+            this.priceListBox.Location = new System.Drawing.Point(0, 33);
+            this.priceListBox.Margin = new System.Windows.Forms.Padding(0);
+            this.priceListBox.Name = "priceListBox";
+            this.priceListBox.Size = new System.Drawing.Size(112, 400);
+            this.priceListBox.TabIndex = 2;
+            // 
+            // volumeListBox
+            // 
+            this.volumeListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.volumeListBox.FormattingEnabled = true;
+            this.volumeListBox.ItemHeight = 12;
+            this.volumeListBox.Location = new System.Drawing.Point(112, 33);
+            this.volumeListBox.Margin = new System.Windows.Forms.Padding(0);
+            this.volumeListBox.Name = "volumeListBox";
+            this.volumeListBox.Size = new System.Drawing.Size(113, 400);
+            this.volumeListBox.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1209, 646);
+            this.Controls.Add(this.tableLayoutPanel4);
+            this.Controls.Add(this.stockSearchButton5_1);
+            this.Controls.Add(this.stockTextBox5_1);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.stockSearchButton);
             this.Controls.Add(this.stockTextBox);
@@ -548,6 +654,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.axKHOpenAPI1)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -590,6 +698,13 @@
         private System.Windows.Forms.Label stockUpDownLabel;
         private System.Windows.Forms.Label stockVolumeLabel;
         private System.Windows.Forms.Label stockUpDownRateLabel;
+        private System.Windows.Forms.TextBox stockTextBox5_1;
+        private System.Windows.Forms.Button stockSearchButton5_1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Label priceLabel;
+        private System.Windows.Forms.Label upDownRateLabel;
+        private System.Windows.Forms.ListBox priceListBox;
+        private System.Windows.Forms.ListBox volumeListBox;
     }
 }
 
