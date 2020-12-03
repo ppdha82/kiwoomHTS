@@ -27,15 +27,13 @@ namespace WindowsFormsApp1
         List<stockInfo> stockList;
         /* chap 5.1 */
         List<stockInfo> stockList5_1;
+        /* chap 6.1 */
+        List<stockInfo> stockList6_1;
 
-        /* chap 4.2 */
+        /* chap 4.2 & chap 5.1 */
         public string currentStockCode = "";
-        /* chap 5.1 */
-        public string currentstockCode5_1 = "";
 
-        /* chap 4.1 */
-        /* chap 4.2 */
-        /* chap 5.1 */
+        /* chap 4.1 & chap 4.2 & chap 5.1 & chap 6.1 */
         public void onEventConnect(object sender, AxKHOpenAPILib._DKHOpenAPIEvents_OnEventConnectEvent e)
         {
             if (e.nErrCode == 0)
@@ -65,8 +63,7 @@ namespace WindowsFormsApp1
                 /* stock code list */
                 stockList = new List<stockInfo>();
 
-                /* chap 4.1 */
-                /* chap 4.2 */
+                /* chap 4.1 & chap 4.2 & chap 5.1 */
                 AutoCompleteStringCollection stockcollection = new AutoCompleteStringCollection();
                 string stockCode = axKHOpenAPI1.GetCodeListByMarket(null);
                 string[] stockCodeArray = stockCode.Split(';');
@@ -82,18 +79,19 @@ namespace WindowsFormsApp1
                 }
                 stockTextBox.AutoCompleteCustomSource = stockcollection;
 
-                /* chap 5.1 */
-                stockList5_1 = new List<stockInfo>();
-
-                AutoCompleteStringCollection stockcollection5_1 = new AutoCompleteStringCollection();
-                string stockCodeList5_1 = axKHOpenAPI1.GetCodeListByMarket(null);
-                string[] stockCodeArray5_1 = stockCodeList5_1.Split(';');
-                for (int i = 0; i < stockCodeArray5_1.Length; i++)
+                /* chap 6.1 */
+                orderComboBox6_1.Items.Add("00:지정가".ToString());
+                orderComboBox6_1.Items.Add("03:시장가".ToString());
+                stockList6_1 = new List<stockInfo>();
+                string accountList6_1 = axKHOpenAPI1.GetLoginInfo("ACCLIST");
+                string[] accountArray6_1 = accountList6_1.Split(';');
+                for (int i = 0; i < accountArray6_1.Length; i++)
                 {
-                    stockList5_1.Add(new stockInfo(stockCodeArray5_1[i], axKHOpenAPI1.GetMasterCodeName(stockCodeArray5_1[i])));
-                    stockcollection5_1.Add(stockList5_1[i].stockName);
+                    accountComboBox6_1.Items.Add(accountArray6_1[i]);
                 }
-                stockTextBox5_1.AutoCompleteCustomSource = stockcollection5_1;
+                string stocklist6_1 = axKHOpenAPI1.GetCodeListByMarket(null);
+                string[] stockArray6_1 = stocklist6_1.Split(';');
+                AutoCompleteStringCollection stockCollection6_1 = new AutoCompleteStringCollection();
             }
         }
 
@@ -106,6 +104,7 @@ namespace WindowsFormsApp1
             }
         }
 
+        /* chap 4.1 */
         public void ButtonClicked(object sender, EventArgs e)
         {
             if(sender.Equals(balanceCheckButton))
@@ -228,6 +227,12 @@ namespace WindowsFormsApp1
 
                 MessageBox.Show("[매도최우선호가 = " + 매도최우선호가 + "][매수최우선호가 = " + 매수최우선호가 + "]");
             }
+            /* chap 6.1 */
+            else if (e.sRQName == "종목정보요청")
+            {
+                string stockPrice = axKHOpenAPI1.GetCommData(e.sTrCode, e.sRQName, 0, "현재가");
+                priceNumericUpDown6_1.Value = long.Parse(stockPrice.Replace("-", ""));
+            }
         }
 
         /* chap 4.2 */
@@ -319,34 +324,20 @@ namespace WindowsFormsApp1
         }
 
         /* Search Button Click Event */
-        /* chap 4.1 */
-        /* chap 4.2 */
+        /* chap 4.1 & chap 4.2 & chap 5.1 & chap 6.1 */
         public void stockSearch(object sender, EventArgs e)
         {
-            /* chap 4.1 & chap 4.2 */
             string stockName = stockTextBox.Text;
             int index = stockList.FindIndex(a => a.stockName == stockName);
-            string stockCode = stockList[index].stockCode;
-            axKHOpenAPI1.SetInputValue("종목코드", stockCode);
-            axKHOpenAPI1.CommRqData("종목정보요청", "opt10001", 0, "5000");
-        }
-
-        /* chap 5.1 */
-        public void stockSearch5_1(object sender, EventArgs e)
-        {
-            /* chap 5.1 */
-            string stockName5_1 = stockTextBox5_1.Text;
-            int index5_1 = stockList5_1.FindIndex(a => a.stockName == stockName5_1);
-            currentstockCode5_1 = stockList5_1[index5_1].stockCode;
-
-            if (currentstockCode5_1.Length > 0)
+            currentStockCode = stockList[index].stockCode;
+            if(currentStockCode.Length > 0)
             {
-                Console.WriteLine("run chap5.1");
-                axKHOpenAPI1.SetInputValue("종목코드", currentstockCode5_1);
+                axKHOpenAPI1.SetInputValue("종목코드", currentStockCode);
                 axKHOpenAPI1.CommRqData("종목정보요청", "opt10001", 0, "5000");
 
-                axKHOpenAPI1.SetInputValue("종목코드", currentstockCode5_1);
+                axKHOpenAPI1.SetInputValue("종목코드", currentStockCode);
                 axKHOpenAPI1.CommRqData("주식호가", "opt10004", 0, "5001");
+
             }
         }
 
@@ -405,18 +396,40 @@ namespace WindowsFormsApp1
             }
         }
 
+        /* chap 6.1 */
+        public void orderButtonClicked(object sender, EventArgs e)
+        {
+            if (sender.Equals(buyButton6_1))
+            {
+                if (stockTextBox.Text.Length > 0 && accountComboBox6_1.Text.Length > 0)
+                {
+                    string stockText = stockTextBox.Text;
+                    int index = stockList6_1.FindIndex(o => o.stockName == stockText);
+
+                    string orderCode = stockList6_1[index].stockCode;
+                    string accountCode = accountComboBox6_1.Text;
+                    int stockQty = int.Parse(numberNumericUpDown6_1.Value.ToString());
+                    int stockPrice = int.Parse(priceNumericUpDown6_1.Value.ToString());
+                    string[] orderCombo = orderComboBox6_1.Text.Split(':');
+
+                    axKHOpenAPI1.SendOrder("종목신규매수", "8249", accountCode, 1, orderCode, stockQty, stockPrice, orderCombo[0], "");
+                }
+            }
+        }
+
         public Form1()
         {
             InitializeComponent();
             axKHOpenAPI1.CommConnect();
+            /* chap 4.1 & chap 4.2 & chap 5.1 & chap 6.1 */
             axKHOpenAPI1.OnEventConnect += onEventConnect;
             passwordTextBox.TextChanged += encryptPassword;
             balanceCheckButton.Click += ButtonClicked;
             axKHOpenAPI1.OnReceiveRealData += onReceiveRealData;
             axKHOpenAPI1.OnReceiveTrData += onReceiveTrData;
+            /* chap 4.1 & chap 4.2 */
             stockSearchButton.Click += stockSearch;
             /* chap 5.1 */
-            stockSearchButton5_1.Click += stockSearch5_1;
             priceListBox.DrawItem += ListBox_DrawItem;
             priceListBox.DrawMode = DrawMode.OwnerDrawVariable;
 
@@ -425,6 +438,9 @@ namespace WindowsFormsApp1
             volumeListBox.DrawItem += ListBox_DrawItem;
             volumeListBox.DrawMode = DrawMode.OwnerDrawVariable;
             volumeListBox.ItemHeight = volumeListBox.Height / 20;
+
+            /* chap 6.1 */
+            buyButton6_1.Click += orderButtonClicked;
         }
     }
 }

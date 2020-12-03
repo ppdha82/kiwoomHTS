@@ -51,8 +51,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.totalProfitRateLabel = new System.Windows.Forms.Label();
             this.axKHOpenAPI1 = new AxKHOpenAPILib.AxKHOpenAPI();
-            this.stockTextBox = new System.Windows.Forms.TextBox();
-            this.stockSearchButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -64,18 +62,38 @@
             this.stockUpDownLabel = new System.Windows.Forms.Label();
             this.stockVolumeLabel = new System.Windows.Forms.Label();
             this.stockUpDownRateLabel = new System.Windows.Forms.Label();
-            this.stockTextBox5_1 = new System.Windows.Forms.TextBox();
-            this.stockSearchButton5_1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.priceLabel = new System.Windows.Forms.Label();
             this.upDownRateLabel = new System.Windows.Forms.Label();
             this.priceListBox = new System.Windows.Forms.ListBox();
             this.volumeListBox = new System.Windows.Forms.ListBox();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.accountComboBox6_1 = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.stockSearchButton = new System.Windows.Forms.Button();
+            this.stockTextBox = new System.Windows.Forms.TextBox();
+            this.numberNumericUpDown6_1 = new System.Windows.Forms.NumericUpDown();
+            this.priceNumericUpDown6_1 = new System.Windows.Forms.NumericUpDown();
+            this.orderComboBox6_1 = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.splitter2 = new System.Windows.Forms.Splitter();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.buyButton6_1 = new System.Windows.Forms.Button();
+            this.sellButton6_1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axKHOpenAPI1)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numberNumericUpDown6_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.priceNumericUpDown6_1)).BeginInit();
+            this.tableLayoutPanel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -213,9 +231,9 @@
             // 
             // balanceCheckButton
             // 
-            this.balanceCheckButton.Location = new System.Drawing.Point(267, 24);
+            this.balanceCheckButton.Location = new System.Drawing.Point(30, 186);
             this.balanceCheckButton.Name = "balanceCheckButton";
-            this.balanceCheckButton.Size = new System.Drawing.Size(109, 68);
+            this.balanceCheckButton.Size = new System.Drawing.Size(231, 28);
             this.balanceCheckButton.TabIndex = 2;
             this.balanceCheckButton.Text = "계좌 잔고 요청";
             this.balanceCheckButton.UseVisualStyleBackColor = true;
@@ -234,7 +252,7 @@
             this.tableLayoutPanel2.Controls.Add(this.totalProfitLabel, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.label12, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.totalProfitRateLabel, 1, 3);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(30, 193);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(30, 248);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.9697F));
@@ -356,24 +374,6 @@
             this.axKHOpenAPI1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axKHOpenAPI1.OcxState")));
             this.axKHOpenAPI1.Size = new System.Drawing.Size(100, 50);
             this.axKHOpenAPI1.TabIndex = 0;
-            // 
-            // stockTextBox
-            // 
-            this.stockTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.stockTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.stockTextBox.Location = new System.Drawing.Point(30, 352);
-            this.stockTextBox.Name = "stockTextBox";
-            this.stockTextBox.Size = new System.Drawing.Size(119, 21);
-            this.stockTextBox.TabIndex = 4;
-            // 
-            // stockSearchButton
-            // 
-            this.stockSearchButton.Location = new System.Drawing.Point(181, 350);
-            this.stockSearchButton.Name = "stockSearchButton";
-            this.stockSearchButton.Size = new System.Drawing.Size(75, 23);
-            this.stockSearchButton.TabIndex = 5;
-            this.stockSearchButton.Text = "종목검색";
-            this.stockSearchButton.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel3
             // 
@@ -534,30 +534,6 @@
             this.stockUpDownRateLabel.Text = "label19";
             this.stockUpDownRateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // stockTextBox5_1
-            // 
-            this.stockTextBox5_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.stockTextBox5_1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.stockTextBox5_1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.stockTextBox5_1.Location = new System.Drawing.Point(457, 80);
-            this.stockTextBox5_1.Name = "stockTextBox5_1";
-            this.stockTextBox5_1.Size = new System.Drawing.Size(100, 21);
-            this.stockTextBox5_1.TabIndex = 7;
-            // 
-            // stockSearchButton5_1
-            // 
-            this.stockSearchButton5_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.stockSearchButton5_1.Location = new System.Drawing.Point(607, 80);
-            this.stockSearchButton5_1.Name = "stockSearchButton5_1";
-            this.stockSearchButton5_1.Size = new System.Drawing.Size(75, 23);
-            this.stockSearchButton5_1.TabIndex = 8;
-            this.stockSearchButton5_1.Text = "종목검색";
-            this.stockSearchButton5_1.UseVisualStyleBackColor = true;
-            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 2;
@@ -567,12 +543,12 @@
             this.tableLayoutPanel4.Controls.Add(this.upDownRateLabel, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.priceListBox, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.volumeListBox, 1, 1);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(457, 112);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(281, 25);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.5F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92.5F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(225, 440);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(225, 550);
             this.tableLayoutPanel4.TabIndex = 9;
             // 
             // priceLabel
@@ -584,7 +560,7 @@
             this.priceLabel.BackColor = System.Drawing.Color.SeaShell;
             this.priceLabel.Location = new System.Drawing.Point(3, 0);
             this.priceLabel.Name = "priceLabel";
-            this.priceLabel.Size = new System.Drawing.Size(106, 33);
+            this.priceLabel.Size = new System.Drawing.Size(106, 41);
             this.priceLabel.TabIndex = 0;
             this.priceLabel.Text = "0";
             this.priceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -598,7 +574,7 @@
             this.upDownRateLabel.BackColor = System.Drawing.Color.LemonChiffon;
             this.upDownRateLabel.Location = new System.Drawing.Point(115, 0);
             this.upDownRateLabel.Name = "upDownRateLabel";
-            this.upDownRateLabel.Size = new System.Drawing.Size(107, 33);
+            this.upDownRateLabel.Size = new System.Drawing.Size(107, 41);
             this.upDownRateLabel.TabIndex = 1;
             this.upDownRateLabel.Text = "0";
             this.upDownRateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -610,10 +586,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.priceListBox.FormattingEnabled = true;
             this.priceListBox.ItemHeight = 12;
-            this.priceListBox.Location = new System.Drawing.Point(0, 33);
+            this.priceListBox.Location = new System.Drawing.Point(0, 41);
             this.priceListBox.Margin = new System.Windows.Forms.Padding(0);
             this.priceListBox.Name = "priceListBox";
-            this.priceListBox.Size = new System.Drawing.Size(112, 400);
+            this.priceListBox.Size = new System.Drawing.Size(112, 508);
             this.priceListBox.TabIndex = 2;
             // 
             // volumeListBox
@@ -623,11 +599,239 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.volumeListBox.FormattingEnabled = true;
             this.volumeListBox.ItemHeight = 12;
-            this.volumeListBox.Location = new System.Drawing.Point(112, 33);
+            this.volumeListBox.Location = new System.Drawing.Point(112, 41);
             this.volumeListBox.Margin = new System.Windows.Forms.Padding(0);
             this.volumeListBox.Name = "volumeListBox";
-            this.volumeListBox.Size = new System.Drawing.Size(113, 400);
+            this.volumeListBox.Size = new System.Drawing.Size(113, 508);
             this.volumeListBox.TabIndex = 3;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 79F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.65753F));
+            this.tableLayoutPanel5.Controls.Add(this.accountComboBox6_1, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.numberNumericUpDown6_1, 1, 2);
+            this.tableLayoutPanel5.Controls.Add(this.priceNumericUpDown6_1, 1, 3);
+            this.tableLayoutPanel5.Controls.Add(this.orderComboBox6_1, 1, 4);
+            this.tableLayoutPanel5.Controls.Add(this.label15, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.label16, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.label17, 0, 2);
+            this.tableLayoutPanel5.Controls.Add(this.label18, 0, 3);
+            this.tableLayoutPanel5.Controls.Add(this.label19, 0, 4);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(534, 28);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 5;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(292, 201);
+            this.tableLayoutPanel5.TabIndex = 10;
+            // 
+            // accountComboBox6_1
+            // 
+            this.accountComboBox6_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.accountComboBox6_1.FormattingEnabled = true;
+            this.accountComboBox6_1.Location = new System.Drawing.Point(82, 3);
+            this.accountComboBox6_1.Name = "accountComboBox6_1";
+            this.accountComboBox6_1.Size = new System.Drawing.Size(207, 20);
+            this.accountComboBox6_1.TabIndex = 5;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Controls.Add(this.stockSearchButton, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.stockTextBox, 0, 0);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(82, 40);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(207, 35);
+            this.tableLayoutPanel6.TabIndex = 6;
+            // 
+            // stockSearchButton
+            // 
+            this.stockSearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.stockSearchButton.Location = new System.Drawing.Point(106, 3);
+            this.stockSearchButton.Name = "stockSearchButton";
+            this.stockSearchButton.Size = new System.Drawing.Size(98, 29);
+            this.stockSearchButton.TabIndex = 0;
+            this.stockSearchButton.Text = "종목검색";
+            this.stockSearchButton.UseVisualStyleBackColor = true;
+            // 
+            // stockTextBox
+            // 
+            this.stockTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.stockTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.stockTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.stockTextBox.Location = new System.Drawing.Point(3, 3);
+            this.stockTextBox.Name = "stockTextBox";
+            this.stockTextBox.Size = new System.Drawing.Size(97, 21);
+            this.stockTextBox.TabIndex = 1;
+            // 
+            // numberNumericUpDown6_1
+            // 
+            this.numberNumericUpDown6_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.numberNumericUpDown6_1.Location = new System.Drawing.Point(82, 81);
+            this.numberNumericUpDown6_1.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.numberNumericUpDown6_1.Name = "numberNumericUpDown6_1";
+            this.numberNumericUpDown6_1.Size = new System.Drawing.Size(207, 21);
+            this.numberNumericUpDown6_1.TabIndex = 7;
+            // 
+            // priceNumericUpDown6_1
+            // 
+            this.priceNumericUpDown6_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.priceNumericUpDown6_1.Location = new System.Drawing.Point(82, 121);
+            this.priceNumericUpDown6_1.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.priceNumericUpDown6_1.Name = "priceNumericUpDown6_1";
+            this.priceNumericUpDown6_1.Size = new System.Drawing.Size(207, 21);
+            this.priceNumericUpDown6_1.TabIndex = 8;
+            // 
+            // orderComboBox6_1
+            // 
+            this.orderComboBox6_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.orderComboBox6_1.FormattingEnabled = true;
+            this.orderComboBox6_1.Location = new System.Drawing.Point(82, 162);
+            this.orderComboBox6_1.Name = "orderComboBox6_1";
+            this.orderComboBox6_1.Size = new System.Drawing.Size(207, 20);
+            this.orderComboBox6_1.TabIndex = 9;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(3, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(73, 37);
+            this.label15.TabIndex = 10;
+            this.label15.Text = "계좌번호";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(3, 37);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(73, 41);
+            this.label16.TabIndex = 11;
+            this.label16.Text = "종목이름";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label17
+            // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(3, 78);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(73, 40);
+            this.label17.TabIndex = 12;
+            this.label17.Text = "수량";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(3, 118);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(73, 41);
+            this.label18.TabIndex = 13;
+            this.label18.Text = "가격";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label19
+            // 
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(3, 159);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(73, 42);
+            this.label19.TabIndex = 14;
+            this.label19.Text = "거래구분";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // splitter2
+            // 
+            this.splitter2.Location = new System.Drawing.Point(0, 0);
+            this.splitter2.Name = "splitter2";
+            this.splitter2.Size = new System.Drawing.Size(3, 646);
+            this.splitter2.TabIndex = 11;
+            this.splitter2.TabStop = false;
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 2;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Controls.Add(this.buyButton6_1, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.sellButton6_1, 1, 0);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(534, 245);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 2;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(292, 76);
+            this.tableLayoutPanel7.TabIndex = 12;
+            // 
+            // buyButton6_1
+            // 
+            this.buyButton6_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buyButton6_1.Location = new System.Drawing.Point(3, 3);
+            this.buyButton6_1.Name = "buyButton6_1";
+            this.buyButton6_1.Size = new System.Drawing.Size(140, 32);
+            this.buyButton6_1.TabIndex = 0;
+            this.buyButton6_1.Text = "신규매수";
+            this.buyButton6_1.UseVisualStyleBackColor = true;
+            // 
+            // sellButton6_1
+            // 
+            this.sellButton6_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.sellButton6_1.Location = new System.Drawing.Point(149, 3);
+            this.sellButton6_1.Name = "sellButton6_1";
+            this.sellButton6_1.Size = new System.Drawing.Size(140, 32);
+            this.sellButton6_1.TabIndex = 1;
+            this.sellButton6_1.Text = "신규매도";
+            this.sellButton6_1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -635,12 +839,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1209, 646);
+            this.Controls.Add(this.tableLayoutPanel7);
+            this.Controls.Add(this.splitter2);
+            this.Controls.Add(this.tableLayoutPanel5);
             this.Controls.Add(this.tableLayoutPanel4);
-            this.Controls.Add(this.stockSearchButton5_1);
-            this.Controls.Add(this.stockTextBox5_1);
             this.Controls.Add(this.tableLayoutPanel3);
-            this.Controls.Add(this.stockSearchButton);
-            this.Controls.Add(this.stockTextBox);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.balanceCheckButton);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -656,8 +859,14 @@
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numberNumericUpDown6_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.priceNumericUpDown6_1)).EndInit();
+            this.tableLayoutPanel7.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -685,8 +894,6 @@
         private System.Windows.Forms.Label totalProfitLabel;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label totalProfitRateLabel;
-        private System.Windows.Forms.TextBox stockTextBox;
-        private System.Windows.Forms.Button stockSearchButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
@@ -698,13 +905,28 @@
         private System.Windows.Forms.Label stockUpDownLabel;
         private System.Windows.Forms.Label stockVolumeLabel;
         private System.Windows.Forms.Label stockUpDownRateLabel;
-        private System.Windows.Forms.TextBox stockTextBox5_1;
-        private System.Windows.Forms.Button stockSearchButton5_1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Label priceLabel;
         private System.Windows.Forms.Label upDownRateLabel;
         private System.Windows.Forms.ListBox priceListBox;
         private System.Windows.Forms.ListBox volumeListBox;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.ComboBox accountComboBox6_1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.Button stockSearchButton;
+        private System.Windows.Forms.TextBox stockTextBox;
+        private System.Windows.Forms.NumericUpDown numberNumericUpDown6_1;
+        private System.Windows.Forms.NumericUpDown priceNumericUpDown6_1;
+        private System.Windows.Forms.ComboBox orderComboBox6_1;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Splitter splitter2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.Button buyButton6_1;
+        private System.Windows.Forms.Button sellButton6_1;
     }
 }
 
